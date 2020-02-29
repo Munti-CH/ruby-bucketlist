@@ -33,25 +33,25 @@
   <section class="sg-section" id="card">
     <h2>01. Card</h2>
 
-    <!-- added content in idea-card-partial -->
+    <%= render(partial: 'idea_card') %>
 
   </section>
   <section class="sg-section" id="logo">
     <h2>02. Logo</h2>
     <h3>Default logo</h3>
 
-    <!-- added content in logo-partial -->
+    <%= render(partial: 'logo') %>
 
     <h3>Negative logo</h3>
     <p>Used on dark background, like in the site footer.</p>
 
-    <!-- content added to negative_logo-partial -->
+    <%= render(partial: 'negative_logo') %>
 
   </section>
   <section class="sg-section" id="search">
     <h2>03. Search</h2>
 
-    <!-- content added to the search_control-partial -->
+    <%= render(partial: 'search_control') %>
 
   </section>
   <section class="sg-section" id="navigation">
@@ -76,7 +76,15 @@
     </nav>
     <h3>Footer navigation</h3>
 
-    <!-- content added to negative_logo-partial -->
+    <div class="sg-dark-bg">
+      <nav class="footer__navigation">
+        <ul>
+          <li><a href="#nolink">About</a></li>
+          <li><a href="#nolink">Style Guide</a></li>
+          <li><a href="#nolink">Terms of Use</a></li>
+        </ul>
+      </nav>
+    </div>
 
     <h3>Pagination</h3>
     <div>
@@ -123,8 +131,19 @@
   <section class="sg-section" id="like">
     <h2>06. Like or Liked button</h2>
 
-    <!-- added to idea_card-partial -->
-
+    <div class="card">
+      <div class="card__footer">
+        <div>
+          <button class="card__btn card__like delta" data-like="see-the-northern-lights">
+            <svg class="icon-heart" role="presentation">
+              <use xlink:href="images/icons-defs.svg#heart"></use>
+            </svg>
+            Like
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
       <div class="card__footer">
         <div>
           <button class="card__btn card__like delta" data-like="see-the-northern-lights">
@@ -136,5 +155,7 @@
         </div>
       </div>
     </div>
+
+
   </section>
 </main>
