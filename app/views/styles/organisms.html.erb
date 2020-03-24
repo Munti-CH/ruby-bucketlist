@@ -223,4 +223,90 @@
           </div>
         </form>
       </main>
-<!-- I SEEM TO MISS HERE SOME HTML CODE -->
+    </section>
+    </section>
+    <section class="sg-section" id="signup">
+      <h2>07. Sign up</h2>
+      <section class="envelope">
+        <header class="text--center">
+          <h1 class="gamma">Sign up</h1>
+          <p>Already a member? <a href="sign-in.html">Log In</a></p>
+        </header>
+        <main>
+          <form action="sign-up.html" method="post">
+            <div class="alert">
+              List validation messages here.
+            </div>
+            <div class="input-group">
+              <label class="input-group__label" for="full-name">Full name</label>
+              <input id="full-name" class="input-group__field" type="text" name="full-name" placeholder="e.g. Diana Prince">
+            </div>
+            <div class="input-group">
+              <label class="input-group__label" for="email">Email address</label>
+              <input id="email" class="input-group__field" type="email" name="email" placeholder="e.g. diana.prince@wonder.com">
+            </div>
+            <div class="input-group">
+              <label class="input-group__label" for="password">Choose a password</label>
+              <input id="password" class="input-group__field" type="password" name="password">
+            </div>
+            <div class="input-group">
+              <label class="input-group__label" for="repeat-password">Retype password</label>
+              <input id="repeat-password" class="input-group__field" type="password" name="repeat-password">
+            </div>
+            <div>
+              <input id="tos" type="checkbox" />
+              <label for="tos">By signing up I agree to My Bucket List's <a href="tos.html">Terms of Service</a>.</label>
+            </div>
+            <div class="prompt">
+              <button class="btn btn--primary prompt__confirm" type="submit">Sign up</button>
+            </div>
+          </form>
+        </main>
+      </section>
+    </section>
+    <section class="sg-section" id="change-password">
+      <h2>08. Change password</h2>
+      <div>
+        <form class="form--inpage" action="account-settings.html" method="post">
+          <div class="alert alert--wide">
+            Please fill out a valid email.<br />
+            Other validation messages.
+          </div>
+          <div class="input-group input-group--horizontal">
+            <label class="input-group__label" for="full-name">Email</label>
+            <input id="email" class="input-group__field" type="email" name="email" placeholder="e.g. diana.prince@wonder.com">
+          </div>
+          <div class="input-group input-group--horizontal">
+            <label class="input-group__label" for="current-password">Current password</label>
+            <input id="current-password" class="input-group__field" type="password" name="current-password">
+          </div>
+          <div class="input-group input-group--horizontal">
+            <label class="input-group__label" for="new-password">New password</label>
+            <input id="new-password" class="input-group__field" type="password" name="new-password">
+          </div>
+          <div class="input-group input-group--horizontal">
+              <label class="input-group__label" for="repeat-password">Confirm new password</label>
+              <input id="repeat-password" class="input-group__field" type="password" name="repeat-password">
+            </div>
+            <%= render(partial: 'prompt_buttons', locals: { label: 'Update account settings' }) %>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="content-wrapper">
+      <div class="logo logo--inverted footer__logo">
+        <a href="/"><span><i>My</i> Bucket List</span></a>
+      </div>
+      <nav class="footer__navigation">
+        <ul>
+          <li><a href="#nolink">About</a></li>
+          <li><a href="#nolink">Style Guide</a></li>
+          <li><a href="#nolink">Terms of Use</a></li>
+        </ul>
+      </nav>
+      <p class="copyright">&copy; EPFL 2017</p>
+    </div>
+  </footer>
+</body>
+</html>
