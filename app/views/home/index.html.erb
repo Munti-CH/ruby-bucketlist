@@ -19,9 +19,13 @@
   <div class="content-wrapper">
     <h2>Some ideas</h2>
     <ul class="bare-list float-grid css-grid">
-      <li>
-        <%= render(partial: 'idea_card', locals: { card_title: 'See the Northern Lights' }) %>
-        </li>
+        <% ['See the Northern Lights',
+            'Something anything much longer text something',
+            'Short'].each do |title| %>
+          <li>
+            <%= render(partial: 'idea_card', locals: { card_title: title }) %>
+            </li>
+        <% end %>
     </ul>
   </div>
   <div class="see-more">
