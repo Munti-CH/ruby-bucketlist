@@ -23,7 +23,7 @@
             'Something anything much longer text something',
             'Short'].each do |title| %>
           <li>
-            <%= render(partial: 'idea_card', locals: { card_title: title }) %>
+            <%= render(partial: 'idea_card', locals: { card_title: title, done_count: 24 }) %>
             </li>
         <% end %>
     </ul>
