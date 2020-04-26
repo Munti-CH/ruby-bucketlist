@@ -23,7 +23,7 @@
             'Something anything much longer text something',
             'Short'].each do |title| %>
           <li>
-            <%= render(partial: 'idea_card', locals: { card_title: title, done_count: 24 }) %>
+            <%= render(partial: 'idea_card', locals: { card_title: title, done_count: 24, photo_url: 'http://fpoimg.com/255x170' }) %>
             </li>
         <% end %>
     </ul>
